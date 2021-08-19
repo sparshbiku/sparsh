@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://smtpjs.com/v3/smtp.js"></script> 
+  <script src="js/sendEmail.js"></script>
+</head>
+<body>
+
+    <!-- footer -->
+   <footer class="bg-dark px-5">
+    <div class="container-fluid">
+      <div class="row text-light py-4">
+        <div class="col-lg-4 col-sm-6">
+          <h5 class="pb-3">About Sparsh</h5>
+          <p class="small">Sparsh is a 501(c)3 registered charity and your donations are tax-deductible. The main goal of our organization is to make sure that 100% of our donation reach the needy with $0 administrative fee since all our work is vountary</p>
+        </div>
+        
+        <div class="col-lg-4 col-sm-6 text-center" >
+          <h5 class="pb-3">Want to Volunteer?</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="footer-link text-uppercase"data-toggle="modal" data-target="#footer_volunteer">Need Volunteer Hours</a>
+            </li>
+            <li>
+              <a href="events.html" class="footer-link text-uppercase">Scheduled Events</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link text-uppercase" data-toggle="modal" data-target="#footer_donate">Donate</a>
+            </li>
+            <li>
+              <a href="mailto:contact@sparshus.com?subject=Please tell me more about volunteer hours" class="text-info">contact@sparshus.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <h5 class="pb-3">Stay Connected</h5>
+          <p class="small">Sign up for our monthly e-letter by providing your email address </p>
+          <form class="mb-3">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Email Address">
+              <div class="input-group-append">
+                <form method="post">
+                 <button type="button" class="btn bg-danger text-white text-uppercase font-weight-bold" onclick="sendEmail()">Sign Up</button>
+                </form>
+              </div>
+            </div>
+          </form>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://www.facebook.com/sparsh.us.7/" target="_blank"><i class="fab fa-facebook-square fa-2x text-primary"></a></i></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/sparshus/" target="_blank"><i class="fab fa-whatsapp fa-2x text-danger"></a></i></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/sparshus/" target="_blank"><i class="fab fa-twitter fa-2x text-info"></a></i></li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center text-light border-top pt-3">
+          <p>&copy; sparshus.com  All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+<!-- End of Footer-->
+ <!-- donate modal -->
+ <div class="modal fade" id="footer_donate">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Want to donate?</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="text-muted text-uppercase">You can donate using </p> 
+        <ul style="list-style-type:none;">
+          <li class="list-inline-item"><a href="https://www.facebook.com/sparsh.us.7/" target="_blank"><i class="fab fa-paypal fa-2x text-primary"></a></i></li>
+          <li class="list-inline-item"><a href="https://www.facebook.com/sparsh.us.7/" target="_blank"><i class="far fa-credit-card fa-2x text-primary"></a></i></li>
+          <li class="list-inline-item"><a href="https://www.facebook.com/sparsh.us.7/" target="_blank"><i class="fas fa-envelope-square fa-2x text-primary"></a></i></li>
+         </ul>        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of modal -->
+
+ <!-- volunteer modal -->
+ <div class="modal fade" id="footer_volunteer">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Please tell us how you want to get involved</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" class="form-control py-2 mb-2" placeholder="Name">
+            <input type="email" class="form-control py-2 mb-2" placeholder="Email">
+            <textarea class="form-control mb-3" placeholder="Questions/Comments" rows="3"></textarea>
+            <p>I am interested in</p>
+            <ul class="volunteeringList">
+            <li><input type="checkbox" id="foodDrive" >&nbsp;<label for="foodDrive">Donating time or services food drive events</label></li>
+            <li><input type="checkbox" id="restonShelter">&nbsp;<label for="restonShelter">Donating time or services for Reston Shelter</label></li>
+            <li><input type="checkbox" id="partnerWithSparsh">&nbsp;<label for="partnerWithSparsh">Partnering with Sparsh</label></li>
+            <li><input type="checkbox" id="SparshCauses">&nbsp;<label for="SparshCauses">Learning more about the causes that Sparsh supports</label></li>
+            <li><input type="checkbox"id="OtherCauses" >&nbsp;<label for="OtherCauses">I can help make a difference in other ways. </label></li></ul>
+            <input type="submit" class="form-control btn-outline-danger">
+          </div>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- end of modal -->
+</body>
+
+</html>

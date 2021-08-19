@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="images/SparshLogo.png">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive-calendar.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <title>SparshUS-Events</title>
+</head>
+<body>
+
+
+  <!-- header -->
+  <div id="header"></div>
+  <!-- end of header -->
+
+   <!-- Calendar -->
+<section>
+  <div class="container p-2" >
+     <!-- Page Heading -->
+     <h1 class="text-secondary text-uppercase font-italic common-title">Upcoming Events</h1>
+    <!-- Responsive calendar - START -->
+    <div class="responsive-calendar">
+      <div class="controls">
+          <a class="pull-left" data-go="prev"><div class="btn btn-primary">Prev</div></a>
+          <h4><span data-head-year></span> <span data-head-month></span></h4>
+          <a class="pull-right" data-go="next"><div class="btn btn-primary">Next</div></a>
+      </div><hr/>
+      <div class="day-headers">
+        <div class="day header">Mon</div>
+        <div class="day header">Tue</div>
+        <div class="day header">Wed</div>
+        <div class="day header">Thu</div>
+        <div class="day header">Fri</div>
+        <div class="day header">Sat</div>
+        <div class="day header">Sun</div>
+      </div>
+      <div class="days" data-group="days">
+        
+      </div>
+    </div>
+    <!-- Responsive calendar - END -->
+  </div>
+</section>
+
+ <!-- end of Calendar -->
+<!-- footer -->
+<div id="footer"></div>
+<!-- End of Footer-->
+
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/script.js"></script>
+<script src="js/responsive-calendar.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".responsive-calendar").responsiveCalendar({
+      time: '2020-05',
+      events: {
+        "2020-05-13": {"number": 5, "url": "http://w3widgets.com/responsive-slider"},
+        "2020-05-26": {"number": 1, "url": "http://w3widgets.com"}, 
+        "2020-05-13":{"number": 1,"url": "https://www.signupgenius.com/"}, 
+        "2020-06-13":{"number": 1,"url": "https://www.signupgenius.com/"}, 
+        "2025-06-12": {}}
+    });
+  });
+</script>
+</body>
+</html>
