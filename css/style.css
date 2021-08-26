@@ -1,33 +1,25 @@
 body {
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
+  padding-top: 70px;
 }
 
 /* header */
 
 header {
-  height: 12vh;
+  height: 10vh;
   background: white;
+  padding-bottom: 2rem;
   }
 
-.header-title {
-  display: inline-block;
-  font-size: 10rem;
-  font-weight: 500;
-  text-shadow: 2px 2px 5px #aaa;
-  transition: all .5s;
+.col-half-offset{
+  margin-left:25%
 }
-
-.header-title {
-  font-family: 'Great Vibes', cursive;
-  font-size: 20rem;
-  margin-right: 10px;
-  font-style: normal;
-}
-
-.header-title:hover {
-  transform: translate(-5px, -3px);
-  text-shadow: 2px 5px 20px #aaa;
+.col-half-position{
+  position: relative;
+  top: 30px;
+  left: 50px;
+  z-index: 100;
 }
 
 /*Navbar --*/
@@ -223,6 +215,31 @@ header {
   transform: translateY(-3px);
 }
 
+.floating-item {
+  background: rgba(0, 0, 0, .65);
+  border-radius: 5px;
+}
+
+.first-item {
+  animation: float 15s infinite;
+}
+
+.second-item {
+  animation: float 20s ease-in infinite;
+}
+
+.third-item {
+  animation: float 40s linear infinite;
+}
+
+.fourth-item {
+  animation: float 30s infinite;
+}
+
+.fifth-item {
+  animation: float 25s ease-in-out infinite;
+}
+
 .label {
   color: #777;
   display: block;
@@ -248,6 +265,20 @@ header {
     margin: auto;
   }
 }
+@keyframes float {
+  0% {
+      transform: translateX(0);
+  }
+
+  50% {
+      transform: translateX(-60px);
+  }
+
+  100% {
+      transform: translateX(0);
+  }
+}
+
 /* end of contact */
 
 
@@ -259,3 +290,72 @@ header {
 
 
   /* end of ul list*/
+  form, input, label, p {
+    color: white !important;
+}
+
+/* popular books */
+.popular-books {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .4;
+}
+
+.bg-video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.book-card {
+  position: relative;
+  box-shadow: 5px 15px 50px #aaa;
+  max-width: 420px;
+  overflow: hidden;
+  transition: all .8s;
+}
+
+.rotate {
+  perspective: 100rem;
+}
+
+.back {
+  position: absolute;
+  top: -100%;
+  background: #fefefe;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+  transform: rotateY(180deg);
+  transition: top .8s, opacity .4s;
+}
+
+.back-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rotate:hover .book-card {
+  transform: rotateY(180deg);
+}
+
+.rotate:hover .back {
+  opacity: 1;
+  top: 0;
+  user-select: auto;
+  pointer-events: auto;
+}
+/* End of popular books */

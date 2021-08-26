@@ -27,25 +27,7 @@
      <!-- Page Heading -->
      <h1 class="text-secondary text-uppercase font-italic common-title">Upcoming Events</h1>
     <!-- Responsive calendar - START -->
-    <div class="responsive-calendar">
-      <div class="controls">
-          <a class="pull-left" data-go="prev"><div class="btn btn-primary">Prev</div></a>
-          <h4><span data-head-year></span> <span data-head-month></span></h4>
-          <a class="pull-right" data-go="next"><div class="btn btn-primary">Next</div></a>
-      </div><hr/>
-      <div class="day-headers">
-        <div class="day header">Mon</div>
-        <div class="day header">Tue</div>
-        <div class="day header">Wed</div>
-        <div class="day header">Thu</div>
-        <div class="day header">Fri</div>
-        <div class="day header">Sat</div>
-        <div class="day header">Sun</div>
-      </div>
-      <div class="days" data-group="days">
-        
-      </div>
-    </div>
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=c3BhcnNoN3VzQGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%230B8043" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     <!-- Responsive calendar - END -->
   </div>
 </section>
@@ -60,19 +42,5 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/script.js"></script>
-<script src="js/responsive-calendar.js"></script>
-<script type="text/javascript">
-  $(document).ready(function () {
-    $(".responsive-calendar").responsiveCalendar({
-      time: '2020-05',
-      events: {
-        "2020-05-13": {"number": 5, "url": "http://w3widgets.com/responsive-slider"},
-        "2020-05-26": {"number": 1, "url": "http://w3widgets.com"}, 
-        "2020-05-13":{"number": 1,"url": "https://www.signupgenius.com/"}, 
-        "2020-06-13":{"number": 1,"url": "https://www.signupgenius.com/"}, 
-        "2025-06-12": {}}
-    });
-  });
-</script>
 </body>
 </html>
